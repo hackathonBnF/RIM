@@ -25,7 +25,7 @@ def get_ark(xml):
             ark.append(match_obj.group(1))
     return ark
 
-def get_partition(arks, offset = 5, limitpage = 10):
+def get_partition(arks):
     for ark in arks:
         print("Retrieve ark" + ark)
         request_url = url_iiif + ark + '/manifest.json'
