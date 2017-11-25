@@ -25,7 +25,7 @@ def get_ark(xml):
             ark.append(match_obj.group(1))
     return ark
 
-def get_partition(arks):
+def get_partition(arks, dest_dir):
     for ark in arks:
         print("Retrieve ark" + ark)
         request_url = url_iiif + ark + '/manifest.json'
@@ -38,7 +38,7 @@ def get_partition(arks):
                         file_name = image['resource']['@id'].replace('/','_')
                         url_image = image['resource']['@id']
                         response = requests.get(url_image)
-                        with open('files/' + file_name, 'wb') as f:
+                        with open(dest_dir + '/' + file_name, 'wb') as f:
                             print('Save file' + ark)
                             f.write(response.content)
 
@@ -56,4 +56,4 @@ options, args = parser.parse_args()
 
 xml = get_xml_gallica(options.query)
 arks = get_ark(xml)
-get_partition(arks)
+get_partition(arks, options.dest)
