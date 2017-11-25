@@ -5,9 +5,13 @@ import re
 from random import randint
 import json
 import optparse
+import mysql.connector as mariadb
 
 url_gallica = "http://gallica.bnf.fr/"
 url_iiif = 'http://gallica.bnf.fr/iiif/'
+
+connection = mariadb.connect(host='localhost', user='root', password='changeme', database='gallica')
+cursor = connection.cursor()
 
 def get_xml_gallica(query = ''):
     request_url = url_gallica + "SRU?operation=searchRetrieve&exactSearch=false&collapsing=true&version=1.2&query=(%28gallica%20all%20\"" + query + "\"%29%20and%20dc.type%20all%20\"partition\")&suggest=10'"
@@ -32,6 +36,8 @@ def get_partition(arks, dest_dir):
         response =  requests.get(request_url)
         if response.status_code == 200:
             manifest = json.loads(response.content)
+            for metadata in manifest['metadata']:
+                cursor.execute("INSERT INTO glc_metadata (ark,label,value) VALUES (%s,%s,%s)", ark, metadata["label"], metadata["value"])
             for image in manifest['sequences']:
                 for canvas in image['canvases']:
                     for image in canvas['images']:
@@ -41,6 +47,9 @@ def get_partition(arks, dest_dir):
                         with open(dest_dir + '/' + file_name, 'wb') as f:
                             print('Save file' + ark)
                             f.write(response.content)
+
+
+
 
 parser = optparse.OptionParser()
 
