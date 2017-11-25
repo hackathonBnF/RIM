@@ -35,9 +35,10 @@ def get_partition(arks, offset = 5, limitpage = 10):
             for image in manifest['sequences']:
                 for canvas in image['canvases']:
                     for image in canvas['images']:
+                        file_name = image['resource']['@id'].replace('/','_')
                         url_image = image['resource']['@id']
                         response = requests.get(url_image)
-                        with open('files/' + str(randint(0,1000)) + '.jpg', 'wb') as f:
+                        with open('files/' + file_name, 'wb') as f:
                             print('Save file' + ark)
                             f.write(response.content)
 
