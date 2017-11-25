@@ -66,7 +66,7 @@ def get_partition(arks, dest_dir):
                         cursor.execute("INSERT IGNORE INTO glc_partition (id,ark) VALUES (%s,%s)", (file_name, ark))
             connection.commit()
 
-parser = optparse.OptionParser()
+parser = optparse.OptionParser(usage="Gallica querying tool")
 
 parser.add_option('-d', '--dest',
     action="store", dest="dest",
@@ -77,6 +77,9 @@ parser.add_option('-q', '--query',
     help="Query term", default="")
 
 options, args = parser.parse_args()
+
+if not options.query:
+    parser.error('Search term not given')
 
 xml = get_xml_gallica(options.query)
 arks = get_ark(xml)
