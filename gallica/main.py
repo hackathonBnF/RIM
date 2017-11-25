@@ -47,7 +47,7 @@ def get_partition(arks, dest_dir):
                         url_image = image['resource']['@id']
                         response = requests.get(url_image)
                         with open(dest_dir + '/' + file_name, 'wb') as f:
-                            print('Save file' + ark)
+                            print('Save file' + file_name)
                             f.write(response.content)
 
 parser = optparse.OptionParser()
