@@ -1,5 +1,6 @@
 gallica/bam/*
 gallica/files/*
+gallica/db/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
