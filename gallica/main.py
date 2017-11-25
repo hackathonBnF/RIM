@@ -37,7 +37,9 @@ def get_partition(arks, dest_dir):
         if response.status_code == 200:
             manifest = json.loads(response.content)
             for metadata in manifest['metadata']:
-                cursor.execute("INSERT INTO glc_metadata (ark,label,value) VALUES (%s,%s,%s)", ark, metadata["label"], metadata["value"])
+                if not isinstance(metadata['value'], list):
+                    cursor.execute("INSERT IGNORE INTO glc_metadata (ark,label,value) VALUES (%s,%s,%s)", (ark, metadata["label"], metadata["value"]))
+            connection.commit()
             for image in manifest['sequences']:
                 for canvas in image['canvases']:
                     for image in canvas['images']:
@@ -47,9 +49,6 @@ def get_partition(arks, dest_dir):
                         with open(dest_dir + '/' + file_name, 'wb') as f:
                             print('Save file' + ark)
                             f.write(response.content)
-
-
-
 
 parser = optparse.OptionParser()
 
