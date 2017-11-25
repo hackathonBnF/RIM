@@ -1,0 +1,12 @@
+mysql:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: changeme
+    MYSQL_DATABASE: gallica
+    MYSQL_USER: gallica_user
+    MYSQL_PASSWORD: changeme
+  expose:
+    - "3306:"
+  volumes:
+    - ./db:/var/lib/mysql
+  restart: always
