@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>RIM - Recherche Intelligente de Musique</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  </head>
+  <body>
+  <nav class="grey lighten-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img height="60" width="170" src="assets/image/LogoRim.svg" alt="logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li class="input-field col s6">
+          <i class="material-icons prefix">audiotrack</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Rechercher</label>
+        </li>
+        <!--li><a href="#">AAA</a></li-->
+      </ul>
+
+      <!--ul id="nav-mobile" class="side-nav">
+        <li><a href="#">AAA</a></li>
+      </ul-->
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h2 class="header center black-text">Recherche Intelligente de Musique</h2>
+      <br>
+      <div class="row center">
+        <div class="row">
+          <form class="col s12">
+            <div class="row z-depth-2">
+                <ul id="tabs-swipe-demo" class="tabs">
+                    <li class="tab col s3"><a class="active" href="#test-swipe-1"><i class="small material-icons">face</i></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-2"><i class="small material-icons">today</i></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-3"><i class="small material-icons">subject</i></a></li>
+                    <li class="tab col s3"><a href="#test-swipe-4"><i class="small material-icons">library_books</i></a></li>
+                </ul>
+                <div id="test-swipe-1" class="col s12 tabs_search">
+                    <br><br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">Nom de l'artiste</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="test-swipe-2" class="col s12 tabs_search">
+                    <br><br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="date" type="text" class="validate">
+                            <label for="date">Année de création</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="test-swipe-3" class="col s12 tabs_search">
+                    <br><br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="list" type="text" class="validate">
+                            <label for="list">Texte</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="test-swipe-4" class="col s12 tabs_search">
+                    <br><br>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="biblio" type="text" class="validate">
+                            <label for="biblio">Sujet de l'oeuvre</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="row center">
+                  <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Rechercher</a>
+              </div>
+          </form>
+        </div>
+      </div>
+      <br>
+
+    </div>
+  </div>
+
+    <div class="divider"></div>
+
+  <br><br>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4 card">
+          <div class="icon-block card-content">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Pourquoi RIM?</h5>
+
+            <p class="light"><p>Comment fonctionne RIM?
+              La récupération des partitions de Gallica
+              via les API fournies par la BnF </br>
+              La transformation des partitions au format image en partitions lisibles
+              via un moteur d'OMR.
+              le point le plus difficile </br>
+
+              La génération des fichiers audio, et la présentation des données à l'usager
+              Via un synthétiseur MIDI, et un lecteur audio HTML5 dans le navigateur</p></p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="card">
+              <div class="icon-block card-content">
+                  <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                  <h5 class="center">L'OMR, un défi technologique pour faire entrer les collections musicales des bibliothèques dans le XXIe siècle</h5>
+
+                  <p class="light">L'OMRisation des partitions apparaît aujourd'hui nécessaire pour permettre des usages novateurs par les usagers, tant chercheurs que grand public.
+                      Les partitions numérisées sont utilisables par des musiciens pour jouer ces œuvres, mais autrement, leur utilité pour le public ne sachant pas lire les notes reste faible.
+                      Or la musique fait l'objet d'une standardisation de sa représentation sous forme de partitions. </p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 card">
+          <div class="icon-block card-content">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">À la condition qu'on arrive à faire lire par une machine ces partitions, de façon à ce qu'elle les convertisse en fichiers MIDI, il deviendrait possible de rendre audibles ces contenus.
+                De même, la recherche dans le domaine musical, du fait de l'existence de fichiers recensant le contenu des partitions dans un format accessible par une machine rendrait possible la recherche de thèmes musicaux, réalisant de nouvelles possibilités pour mener des recherches sur l'intermusicalité des œuvres, et l'influence mutuelle des auteurs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+  </div>
+
+  <div class="divider"></div>
+
+  <br><br>
+<div class="col s12 ">
+  <section id="wrapper" class="skewed">
+      <div class="layer bottom">
+          <div class="content-wrap">
+              <div class="content-body">
+                  <h1>Pourquoi RIM?</h1>
+                  <p>Comment fonctionne RIM?
+                      La récupération des partitions de Gallica
+                      via les API fournies par la BnF </br>
+                      La transformation des partitions au format image en partitions lisibles
+                      via un moteur d'OMR.
+                      le point le plus difficile </br>
+
+                      La génération des fichiers audio, et la présentation des données à l'usager
+                      Via un synthétiseur MIDI, et un lecteur audio HTML5 dans le navigateur</p>
+              </div>
+              <img src="assets/image/TIV258VG3N.jpg" alt="">
+          </div>
+      </div>
+
+      <div class="layer top">
+          <div class="content-wrap">
+              <div class="content-body">
+                  <h1>Stay Cool</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam temporibus dolore vero reiciendis atque debitis. Sequi at consequatur deserunt?</p>
+              </div>
+              <img src="assets/image/partition-de-musique-50ee9afa.jpg" display="cover "alt="">
+          </div>
+      </div>
+
+      <div class="handle"></div>
+
+      <div class="divider"></div>
+
+      <br><br>
+
+  <footer class="page-footer red lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"><a class="white-text" href="#">Mentions légales</a></h5>
+          <p class="grey-text text-lighten-4">We are a team working on this project like it's our full time job. Support and continue development on this project is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l6 s12 center">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://twitter.com/RIMenTweet" target="new"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+            <li><a class="white-text" href="https://github.com/hackathonBnF/BaM/tree/master/gallica" target="new"><i class="fa fa-github-square fa-3x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">(D)RIM Team Hackathon BNF</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="assets/js/jquery-2.1.1.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  </body>
+</html>
