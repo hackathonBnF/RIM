@@ -1,6 +1,6 @@
 # Gallica
 
-This script query the Gallica database and fetch partition. The files are stored by
+This script query the Gallica database and fetch scores. The files are stored by
 default in the directory ``files/``.
 
 ## Install

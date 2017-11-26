@@ -2,4 +2,8 @@ CREATE TABLE `glc_metadata` (
   `ark` varchar(128) NOT NULL,
   `label` varchar(256) NOT NULL,
   `value` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `glc_partition` (
+  `id` varchar(256) NOT NULL,
+  `ark` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
