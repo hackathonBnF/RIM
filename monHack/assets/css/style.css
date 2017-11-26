@@ -1,0 +1,165 @@
+.tabs_search {
+  height: 200px;
+}
+#wrapper{
+    position: relative;
+    width:100%;
+    min-height:55vw;
+    overflow: hidden;
+        transform: 2s;
+
+}
+
+#index-banner{
+    background-color: #fefeff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='46' viewBox='0 0 70 46'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ebe7f1' fill-opacity='0.4'%3E%3Cpolygon points='68 44 62 44 62 46 56 46 56 44 52 44 52 46 46 46 46 44 40 44 40 46 38 46 38 44 32 44 32 46 26 46 26 44 22 44 22 46 16 46 16 44 12 44 12 46 6 46 6 44 0 44 0 42 8 42 8 28 6 28 6 0 12 0 12 28 10 28 10 42 18 42 18 28 16 28 16 0 22 0 22 28 20 28 20 42 28 42 28 28 26 28 26 0 32 0 32 28 30 28 30 42 38 42 38 0 40 0 40 42 48 42 48 28 46 28 46 0 52 0 52 28 50 28 50 42 58 42 58 28 56 28 56 0 62 0 62 28 60 28 60 42 68 42 68 0 70 0 70 46 68 46'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+nav{
+    background: #3D3847;
+    position: fixed;
+    z-index: 4;
+}
+
+footer{
+    background: #3D3847;
+}
+
+
+img{
+    float: left;
+}
+
+h2.header{
+    color:#3D3847 !important;
+}
+
+#logoBnf{
+    margin-left: 20px;
+}
+
+.col.s12{
+    background: #FFF;
+}
+.col.l6{
+    background: #3D3847;
+    opacity: 0.5;
+}
+
+.test-swap{
+    background: #FFF;
+
+}
+.modal-content{
+    background-color: black;
+}
+
+.modal-content h4{
+    color: #fff;
+}
+
+.modal-content p{
+    color: #fff;
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+li>a.active {
+    background-color: #3D3847 !important;
+    opacity: 0.8 !important;
+}
+
+.layer{
+    position: absolute;
+    width:100vw;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer .content-wrap{
+    position: absolute;
+    width:100vw;
+    min-height: 55vw;
+}
+
+.layer .content-body{
+    width:25%;
+    position:absolute;
+    top:50%;
+    text-align: center;
+    transform:translateY(-50%);
+    color:#fff;
+}
+
+.layer img{
+    position: absolute;
+    width:35%;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.layer h1{
+    font-size:2em;
+}
+
+.bottom{
+    background:#222;
+    z-index:1;
+}
+
+.bottom .content-body{
+    right:5%;
+}
+
+.bottom h1{
+    color:#FDAB00;
+}
+
+.top{
+    background:#eee;
+    color:#222;
+    z-index:2;
+    width:50vw;
+}
+
+.top .content-body{
+    left: 5%;
+    color:#222;
+}
+
+.handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #FDAB00;
+    width:5px;
+    top:0;
+    left: 50%;
+    z-index:3;
+}
+
+.skewed .handle{
+    top:50%;
+    transform:rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin:top;
+}
+
+.skewed .top{
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap{
+    transform: skew(30deg);
+    margin-left:1000px;
+}
+
+@media(max-width:768px){
+    body{
+        font-size:75%;
+    }
+}
